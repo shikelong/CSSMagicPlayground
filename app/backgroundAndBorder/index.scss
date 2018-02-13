@@ -34,3 +34,45 @@
   border-radius: 1em;
   box-shadow: 0 0 0 0.414em goldenrod;
 }
+
+.stripedBackground {
+  // background: linear-gradient(45deg,#fb3 25%, yellowgreen 0, yellowgreen 50%, #fb3 0, #fb3 75%, yellowgreen 0);
+  // background-size: 30px 30px;
+  background: repeating-linear-gradient(120deg, #fb3, #fb3 15px, #58b 0, #58b 30px);
+}
+
+$tranWhite: rgba($color: #fff, $alpha: 0.2);
+
+.stripedBackgroundOneColor {
+  // transparent 0, transparent 30px
+  background: repeating-linear-gradient(60deg, $tranWhite, $tranWhite 15px, transparent 0, transparent 30px) #58b; 
+}
+
+.cssGrid {
+  background-color: #58b;
+  // background: linear-gradient(rgba(200, 0, 0, .5) 50%, transparent 0), linear-gradient(to right, rgba(200, 0, 0, .5) 50%, transparent 0);
+  background-image: 
+    linear-gradient(white 2px, transparent 0), 
+    linear-gradient(to right, white 2px, transparent 0),
+    linear-gradient($tranWhite 1px, transparent 0), 
+    linear-gradient(to right, $tranWhite 1px, transparent 0);
+  background-size: 75px 75px, 75px 75px, 15px 15px, 15px 15px;
+}
+
+.radialCssGrid {
+  background-color: #655;
+  background-image: radial-gradient(tan 30%, transparent 0),  radial-gradient(tan 30%, transparent 0);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
+
+.chessboard {
+  background: #eee;
+  background-size: 30px 30px;
+  background-image: 
+    linear-gradient(45deg, transparent 75%, #bbb 0), linear-gradient(to left bottom, transparent 75%, #bbb 0),
+    linear-gradient(45deg, transparent 75%, #bbb 0), linear-gradient(to left bottom, transparent 75%, #bbb 0);
+  background-position: 0 0, 15px 15px, 15px 15px, 30px 30px;
+}
+
+

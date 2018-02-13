@@ -1,0 +1,37 @@
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+html * {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 1em;
+}
+
+.square {
+  width: 150px;
+  height: 150px;
+}
+
+section {
+  float: left;
+  margin: 1em 1.5em;
+}
+
+section h3 {
+  padding-left: 0.5rem;
+  border-left: 3px solid #cf6399;
+  font-weight: 400;
+}
+
+.defaultBorder {
+  border: 1px solid #515adf;
+}
+/*# sourceMappingURL=common.css.map */
