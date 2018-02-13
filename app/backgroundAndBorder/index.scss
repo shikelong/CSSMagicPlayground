@@ -76,3 +76,43 @@ $tranWhite: rgba($color: #fff, $alpha: 0.2);
 }
 
 
+.randomBgColor {
+  // background: linear-gradient(to right, #F19483 15px, #BA9132 0, #BA9132 25px, #00AA90 0, #00AA90 50px, #B19693 0, #B19693 75px);
+  background: #f19483;
+  background-image: 
+    linear-gradient(to right, #ba9132 11px, transparent 0), 
+    linear-gradient(to right, #00aa90 23px, transparent 0), 
+    linear-gradient(to right, #d0db2f 41px, transparent 0);
+  background-size: 41px 100%, 61px 100%, 83px 100%;
+}
+
+.continousBorderImage {
+  padding: 1em;
+  border: 1em solid transparent;
+
+  background: linear-gradient(#fff, #fff), url("../assets/image2.png");
+  background-size: cover;
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+}
+
+.continousBorderImage2 {
+  padding: 1em;
+  border: 1em solid transparent;
+
+  background: 
+    linear-gradient(#fff, #fff) padding-box,
+    repeating-linear-gradient(-45deg, red 0, red 12.5%, transparent 0, transparent 25%, 
+      #58a 0, #58a 37.5%, transparent 0, transparent 50%) 0 / 5em 5em;
+}
+
+@keyframes ant {to {background-position: 100%}}
+
+.continousBorderImage3 {
+  border: 1px solid transparent;
+  padding: 1em;
+
+  background: linear-gradient(#fb3, #fb3) padding-box,
+  repeating-linear-gradient(-45deg, #000 0, #000 25%, #fff 0, #fff 50%) 0 / 0.8em 0.8em;
+  animation: ant 10s linear infinite;
+}

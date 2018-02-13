@@ -15,9 +15,18 @@ body {
   padding: 1em;
 }
 
-.square {
+.square, .middleSquare, .largeSquare {
   width: 150px;
   height: 150px;
+}
+
+.middleSquare {
+  width: 350px;
+}
+
+.largeSquare {
+  width: 500px;
+  height: 500px;
 }
 
 section {
