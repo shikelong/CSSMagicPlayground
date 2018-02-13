@@ -1,0 +1,19 @@
+{
+  "name": "cssmagicplayground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shikelong/CSSMagicPlayground.git"
+  },
+  "author": "shikelong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shikelong/CSSMagicPlayground/issues"
+  },
+  "homepage": "https://github.com/shikelong/CSSMagicPlayground#readme"
+}
