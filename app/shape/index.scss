@@ -1,3 +1,124 @@
-.temp {
-  
+.ellipse {
+  background-color: yellowgreen;
+  border-radius: 50%;
+  width: 200px;
+}
+
+.halfOfEllipse {
+  @extend .ellipse;
+  border-radius: 50% / 100% 100% 0 0;
+}
+
+.halfOfEllipse2 {
+  @extend .ellipse;
+  border-radius: 0 100% 100% 0 / 50%;
+}
+
+.quarterOfEllipse {
+  @extend .ellipse;
+  border-radius: 100% 0 0 0;
+}
+
+.parallelogram {
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    background-color: tomato;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    position: absolute;
+    transform: skew(-30deg);
+  }
+}
+
+.diamond {
+  // background: url("../assets/image1.png") 100% 100%;
+  transform: rotate(45deg);
+  overflow: hidden;
+
+  img {
+    max-width: 100%;
+    transform: rotate(-45deg) scale(1.42);
+  }
+}
+
+.diamond2 {
+  background: url("../assets/image1.png");
+  background-size: 100% 100%;
+
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  transition: 1s clip-path;
+
+  &:hover {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@mixin beveled-corners($bg, $tl:0, $tr:$tl, $br:$tl, $bl:$tr){
+  background: $bg;
+  background: 
+    linear-gradient(-45deg, transparent $br, $bg 0) bottom right, 
+    linear-gradient(45deg, transparent $bl, $bg 0) bottom left,
+    linear-gradient(135deg, transparent $tl, $bg 0) top left,
+    linear-gradient(-135deg, transparent $tr, $bg 0) top right;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.corner {
+  @include beveled-corners(#58a, 15px, 5px);
+}
+
+.trapezoid {
+  font-size: 1.5em;
+  color: yellow;
+  padding: 0.5em;
+  position: relative;
+  height: 50px;
+
+  &::before {
+    content: '';
+    display: block;
+    background-color: #58a;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transform: perspective(1.5em) rotateX(10deg) scaleY(1.3);
+    transform-origin: bottom;   
+  }
+}
+
+@keyframes spin {
+  to {transform: rotate(.5turn)}
+}
+
+@keyframes bg {
+  50% {background-color: #f53f08}
+}
+
+.pieChart {
+  border-radius: 50%;
+  background: linear-gradient(to right, yellowgreen 50%, #f53f08 0) yellowgreen;
+
+  &::before {
+    content: '';
+    display: block;
+    height: 100%;
+    margin-left: 50%;
+    background-color: inherit;
+    transform-origin: 0 50%;
+    border-radius: 0 100% 100% 0 / 50%;
+    animation: spin 50s linear infinite,
+               bg 100s step-end infinite;
+    animation-play-state: paused;
+    animation-delay: inherit;
+  }
 }
