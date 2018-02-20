@@ -1,0 +1,97 @@
+.hyphens {
+  border: 1px solid brown;
+  hyphens: auto;
+}
+
+.insertLineBreaks {
+  width: 380px;
+}
+
+.insertLineBreaks dl dt {
+  font-weight: bold;
+  display: inline;
+}
+
+.insertLineBreaks dl dd + dt::before {
+  content: '\A';
+  white-space: pre;
+}
+
+.insertLineBreaks dl dd {
+  display: inline;
+  margin: 0;
+}
+
+.insertLineBreaks dl dd + dd::before {
+  content: ',';
+  font-weight: normal;
+}
+
+.zebraBackground {
+  width: 400px;
+  padding: 0.5em;
+  line-height: 1.5;
+  background: linear-gradient(rgba(0, 0, 0, 0.2) 50%, transparent 0) beige;
+  background-size: 100% 3em;
+  background-origin: content-box;
+  tab-size: 3;
+  font-family: monospace;
+}
+
+.customUnderline {
+  background: linear-gradient(90deg, gray 66%, transparent 0) repeat-x;
+  background-size: .2em 2px;
+  background-position: 0 1em;
+}
+
+.reliefPrinting, .reliefPrinting2 {
+  padding: 1em;
+  font-size: 1.1em;
+  width: 300px;
+  background: #8c99a6;
+  color: #434d56;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+.reliefPrinting2 {
+  background: #434d56;
+  color: #8c99a6;
+  text-shadow: 0 -1px 1px black;
+}
+
+.HollowWords {
+  padding: 1em;
+  font-size: 1.1em;
+  width: 300px;
+  background: deeppink;
+  color: white;
+  text-shadow: 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black;
+}
+
+.textGrow {
+  padding: 1em;
+  font-size: 1.1em;
+  width: 300px;
+  font-size: 2.3em;
+  font-weight: bold;
+  background: #203;
+  color: white;
+  transition: text-shadow 1s;
+}
+
+.textGrow:hover {
+  text-shadow: 0 0 0.1em white, 0 0 0.3em white;
+  color: transparent;
+}
+
+.text3D {
+  padding: 1em;
+  font-size: 1.1em;
+  width: 300px;
+  font-size: 2.3em;
+  font-weight: bold;
+  background: #58a;
+  color: white;
+  text-shadow: 0 1px #d9d9d9, 0 2px #cccccc, 0 3px #bfbfbf, 0 4px #b3b3b3, 0 5px #a6a6a6, 0 5px 10px black;
+}
+/*# sourceMappingURL=index.css.map */
