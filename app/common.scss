@@ -49,6 +49,10 @@ section {
   }
 }
 
+section.noFloatSection {
+  float: none;
+}
+
 .defaultBorder {
   border: 1px solid #515adf;
 }

@@ -1,0 +1,28 @@
+@keyframes bounce {
+  60%, 80%, to {
+    transform: translateY(350px);
+  }
+  70% {
+    transform: translateY(250px);
+  }
+  90% {
+    transform: translateY(300px);
+  }
+}
+
+.bounce {
+  background: linear-gradient(to bottom, #89cfeb, rgba(137, 207, 235, 0.2) 95%, yellowgreen 0);
+  height: 473px;
+}
+
+.bounce::before {
+  content: '\0A';
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: block;
+  background: radial-gradient(closest-side, white, #c43c3c);
+  margin: auto;
+  animation: bounce 3s cubic-bezier(0.1, 0.25, 1, 0.25) infinite;
+}
+/*# sourceMappingURL=index.css.map */
