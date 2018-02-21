@@ -25,4 +25,27 @@
   margin: auto;
   animation: bounce 3s cubic-bezier(0.1, 0.25, 1, 0.25) infinite;
 }
+
+@keyframes blink {
+  50% {
+    color: transparent;
+  }
+}
+
+.blink {
+  animation: 1s blink 3 steps(1);
+}
+
+@keyframes typeAnimation {
+  from {
+    width: 0;
+  }
+}
+
+.typeAnimation {
+  width: 15ch;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typeAnimation 6s steps(15);
+}
 /*# sourceMappingURL=index.css.map */
